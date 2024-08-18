@@ -2,7 +2,13 @@
 agent is penalized one point for each movement.
 
 a. Can a simple reflex agent be perfectly rational for this environment? Explain.
+
+    Si el resultado es el correcto o casi el optimo podriamos decir que si lo es en su entorno.
+
 b. What about a reflex agent with state? Design such an agent.
+
+
+
 c. How do your answers to a and b change if the agent’s percepts give it the clean/dirty
 status of every square in the environment?
 
@@ -13,10 +19,19 @@ initial dirt configuration. (The agent can go Up and Down as well as Left and Ri
 
 
 a. Can a simple reflex agent be perfectly rational for this environment? Explain.
+
 b. Can a simple reflex agent with a randomized agent function outperform a simple reflex
 agent? Design such an agent and measure its performance on several environments.
+
+    En mi ejercicio el agente random gasta mas bateria/vidas para limpiar el entorno.
+
 c. Can you design an environment in which your randomized agent will perform poorly?
 Show your results.
+
+    Los resultados estan en la carpeta code y vemos como a veces para limpiar solo 2 cuadros gasta mucha bateria.
+
 d. Can a reflex agent with state outperform a simple reflex agent? Design such an agent
 and measure its performance on several environments. Can you design a rational agent
 of this type?
+
+

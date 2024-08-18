@@ -1,5 +1,5 @@
 from environment import *
-from agent import *
+from agent_random import *
 from tabulate import tabulate
 
 sizes = [2,4,8,16,32,64,128]  # 2x2, 4x4, 8x8, 16x16, 32x32, 64x64, 128x128
@@ -12,7 +12,7 @@ for size in sizes:
     for dirt_rate in dirt_rates:
         for i in range(repetitions):
             env = Environment(size, size, 0, 0, dirt_rate)
-            agent = Agent(env)
+            agent = AgentR(env)
             env.print_environment()
             while agent.get_battery() > 0:
                 agent.think(env)
@@ -27,11 +27,8 @@ headers = ["Size", "Dirt Rate", "Performance", "Battery Used"]
 table = tabulate(results, headers, tablefmt="pipe")
 
 
-with open("results.md", "w") as f:
+with open("results_randomAgent.md", "w") as f:
     f.write("# Resultados de la Simulación\n\n")
     f.write(table)
 
 print("Resultados guardados en 'results.md'")
-
-
-

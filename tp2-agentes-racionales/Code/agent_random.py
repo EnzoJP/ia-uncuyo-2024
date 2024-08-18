@@ -1,6 +1,6 @@
 from random import random, randint
 
-class Agent:
+class AgentR:
     def __init__(self, env):  # recibe como parámetro un objeto de la clase Environment
         self.performance = 0
         self.battery = 1000
@@ -21,15 +21,14 @@ class Agent:
         if self.matrix[self.posX][self.posY] == 1:
             self.matrix[self.posX][self.posY] = 0
             self.after_clean()
+        else:
+            self.do_nothing()
 
     def perspective(self):  # Sensa el entorno (casilla)
         return self.matrix[self.posX][self.posY] == 1
 
     def think(self, env):  # Implementa las acciones a seguir por el agente 
-        if self.perspective():
-            self.suck()
-        else:
-            action = randint(0, 3)
+            action = randint(0, 5)
             if action == 0:
                 self.move_up()
             elif action == 1:
@@ -38,6 +37,10 @@ class Agent:
                 self.move_left()
             elif action == 3:
                 self.move_right()
+            elif action == 4:
+                self.do_nothing()
+            elif action == 5:
+                self.suck()
 
     def move_up(self):  # Mueve el agente hacia arriba
         if self.posX > 0:
