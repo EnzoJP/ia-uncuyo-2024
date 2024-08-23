@@ -51,14 +51,14 @@ En cuanto a la performance para la configuración actual, vemos cómo el reflexi
 
 Pasaremos a describir el segundo gráfico, el cual se trata de uno del tipo barras, en el cual se muestran en el eje X todos los posibles tamaños de mapa y en el eje Y la medida de performance para las 10 corridas del programa con un dirt rate de 0.4.
 
-![Gráfico 2](/images/Barras_Same_env.png)
+![Gráfico 2](images/Barras_Same_env.png)
 
 También en este caso, podemos observar cómo el agente reflexivo, a medida que los mapas se agrandan, obtiene muchos más puntos de performance.
 
 Por último, pasaremos a ver otra comparación que, si bien es menos justa, vemos cómo la conclusión no cambia. En estos gráficos se describe en el eje X los distintos tamaños con sus dirt rates y en el eje Y el puntaje de la performance o batería para entornos totalmente distintos para ambos.
 
-![Gráfico 3](/images/Reflex_diff.env.png)
-![Gráfico 4](/images/Random_diff_env.png)
+![Gráfico 3](images/Reflex_diff.env.png)
+![Gráfico 4](images/Random_diff_env.png)
 
 Como se mencionó antes, podemos observar que si vemos la batería, por ejemplo, el agente random usa toda la batería mucho antes.
 
