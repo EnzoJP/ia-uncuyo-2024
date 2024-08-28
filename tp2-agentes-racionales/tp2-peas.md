@@ -11,6 +11,7 @@ a) Jugar al CS (o cualquier otro 3d Shooter).
 
   Sensores: teclado y raton, respuesta del servidor, audio
 
+  parcialmente observable, multiagente o unico, dinamico y continuo o discreto (depende la accion) y estocastico
 b) Explorar los oceanos.
 
   Perfomance: metros de profundidad, animales y plantas vistas
@@ -20,6 +21,8 @@ b) Explorar los oceanos.
   Actuadores: camaras,vehiculos submarinos
 
   Sensores: maquinas especializadas, sondas , sensores de presion, temperatura
+
+  parciamente obs, multiagente/uni, dinamico, continuo
 
 c) Comprar y vender tokens crypto (alguno).
 
@@ -31,6 +34,8 @@ c) Comprar y vender tokens crypto (alguno).
 
   Sensores: alertas, mercado en timepo real
 
+  parcialmente obs, multiagente, dinamico, discreto
+
 d ) Practicar tenis contra una pared.
 
   Perfomance: cant de veces, tecnica aplicada, fuerza
@@ -40,6 +45,8 @@ d ) Practicar tenis contra una pared.
   Actuadores: la raqueta, la pelota
 
   Sensores: sonido,sensacion, conteo en la mente
+
+  totalmente observable, uniagente, estàtico, continuo, determinista
 
 e) Realizar un salto de altura.
 
@@ -51,6 +58,8 @@ e) Realizar un salto de altura.
 
   Sensores: sensores de altitud y velocidad
 
+  totalmente obs, uniagente, estatico y continuo
+
 f ) Pujar por un artıculo en una subasta.
 
   Perfomance: menor precio, exitos
@@ -60,3 +69,5 @@ f ) Pujar por un artıculo en una subasta.
   Actuadores: personas, dinero
 
   Sensores: billeteras, pagina web
+
+  totalmente obs, uniagente, dinamico, discreto
