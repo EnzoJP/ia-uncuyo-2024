@@ -10,8 +10,11 @@ import csv
 def random_path(grid,start,goal):
     frontier = [(start, [])]  # (posición actual, camino tomado)
     explored = set()
+    it_max=1000
     
     while frontier:
+        if len(explored) >= it_max:
+            return None,explored
         position, path = frontier.pop()
 
         explored.add(position)
@@ -20,11 +23,13 @@ def random_path(grid,start,goal):
                 return path + [position],explored
         
         neighbors = get_neighbors(position, grid)
-        if len(neighbors) != 0:
+        for neighbor in neighbors:
             action_Random=randint(0,len(neighbors)-1)
-            neighbor = neighbors[action_Random]
+            neighboral = neighbors[action_Random]
             if grid[neighbor[0]][neighbor[1]] != b'H':
-                frontier.append((neighbor, path + [position]))
+                frontier.append((neighboral, path + [position]))
+                break
+            
 
     return None,explored  # Si no se encuentra el objetivo
 
@@ -88,7 +93,7 @@ with open(csv_name, mode='w', newline='') as file:
                 print(f"Estados explorados: {len(explored)}")
             print(f"Tiempo de ejecucion: {finish_time}\n")
 
-            moves = execute_actions(env, result, start_position)
+            #moves = execute_actions(env, result, start_position)
             success = True
             print("Goal found.")
         elif result is not None and len(result) > nuevo_limite:

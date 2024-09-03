@@ -12,7 +12,7 @@ seed("hola soy la semilla ^^")
 csv_name = 'resultados.csv'
 with open(csv_name, mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['Escenario', 'Algoritmo', 'Alcanzo el resultado', 'Estados Explorados', 'Tiempo de Ejecución','Alcanzo el limite', 'Costo del Camino'])
+    writer.writerow(['Escenario', 'Algoritmo', 'Alcanzo el resultado', 'Estados Explorados', 'Tiempo de Ejecucion','Alcanzo el limite', 'Costo del Camino'])
     
     #Crear los entornos de gym con mapas aleatorios y guardarlos en una lista
     iterations = 30

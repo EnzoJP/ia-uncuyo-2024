@@ -1,0 +1,151 @@
+Escenario,Algoritmo,Alcanzo el resultado,Estados Explorados,Tiempo de Ejecucion,Alcanzo el limite,Costo del Camino
+1,busqueda en amplitud,True,5969,0.022257328033447266,False,
+2,busqueda en amplitud,True,8455,0.048956871032714844,False,
+3,busqueda en amplitud,True,2541,0.019503355026245117,False,
+4,busqueda en amplitud,True,1256,0.008984088897705078,False,
+5,busqueda en amplitud,True,2265,0.016144275665283203,False,
+6,busqueda en amplitud,True,6310,0.025979995727539062,False,
+7,busqueda en amplitud,True,474,0.008999109268188477,False,
+8,busqueda en amplitud,True,1292,0.009978294372558594,False,
+9,busqueda en amplitud,True,6341,0.024000167846679688,False,
+10,busqueda en amplitud,True,1643,0.009988546371459961,False,
+11,busqueda en amplitud,True,5823,0.022009849548339844,False,
+12,busqueda en amplitud,True,2585,0.011987924575805664,False,
+13,busqueda en amplitud,True,2755,0.013995647430419922,False,
+14,busqueda en amplitud,True,616,0.011992931365966797,False,
+15,busqueda en amplitud,True,6947,0.02499866485595703,False,
+16,busqueda en amplitud,True,8747,0.030976533889770508,False,
+17,busqueda en amplitud,True,1033,0.007997512817382812,False,
+18,busqueda en amplitud,True,635,0.007018566131591797,False,
+19,busqueda en amplitud,True,1580,0.011017560958862305,False,
+20,busqueda en amplitud,True,1153,0.007990837097167969,False,
+21,busqueda en amplitud,True,1331,0.009005308151245117,False,
+22,busqueda en amplitud,True,7157,0.027995586395263672,False,
+23,busqueda en amplitud,True,1835,0.010006189346313477,False,
+24,busqueda en amplitud,True,3427,0.019001483917236328,False,
+25,busqueda en amplitud,True,7457,0.02897787094116211,False,
+26,busqueda en amplitud,True,2839,0.017984628677368164,False,
+27,busqueda en amplitud,True,2269,0.016974687576293945,False,
+28,busqueda en amplitud,True,4866,0.02298116683959961,False,
+29,busqueda en amplitud,True,376,0.006991386413574219,False,
+30,busqueda en amplitud,True,2314,0.010988235473632812,False,
+1,busqueda en profundidad,N/A,N/A,0.7325818538665771,True,
+2,busqueda en profundidad,N/A,N/A,0.372802734375,True,
+3,busqueda en profundidad,N/A,N/A,0.7745537757873535,True,
+4,busqueda en profundidad,N/A,N/A,0.30893898010253906,True,
+5,busqueda en profundidad,N/A,N/A,0.9632902145385742,True,
+6,busqueda en profundidad,N/A,N/A,0.0679619312286377,True,
+7,busqueda en profundidad,N/A,N/A,0.01900005340576172,True,
+8,busqueda en profundidad,N/A,N/A,0.03897881507873535,True,
+9,busqueda en profundidad,N/A,N/A,0.010993480682373047,True,
+10,busqueda en profundidad,N/A,N/A,0.5028035640716553,True,
+11,busqueda en profundidad,N/A,N/A,0.019988536834716797,True,
+12,busqueda en profundidad,N/A,N/A,0.8522801399230957,True,
+13,busqueda en profundidad,N/A,N/A,0.12293028831481934,True,
+14,busqueda en profundidad,N/A,N/A,0.07195472717285156,True,
+15,busqueda en profundidad,N/A,N/A,0.44501209259033203,True,
+16,busqueda en profundidad,N/A,N/A,0.020989418029785156,True,
+17,busqueda en profundidad,N/A,N/A,0.15095901489257812,True,
+18,busqueda en profundidad,N/A,N/A,0.11603665351867676,True,
+19,busqueda en profundidad,N/A,N/A,0.8529341220855713,True,
+20,busqueda en profundidad,N/A,N/A,0.0540921688079834,True,
+21,busqueda en profundidad,N/A,N/A,0.6839988231658936,True,
+22,busqueda en profundidad,N/A,N/A,0.8399434089660645,True,
+23,busqueda en profundidad,N/A,N/A,0.3580131530761719,True,
+24,busqueda en profundidad,N/A,N/A,0.7550060749053955,True,
+25,busqueda en profundidad,N/A,N/A,0.1650090217590332,True,
+26,busqueda en profundidad,N/A,N/A,0.05307412147521973,True,
+27,busqueda en profundidad,N/A,N/A,0.13093161582946777,True,
+28,busqueda en profundidad,N/A,N/A,0.10100674629211426,True,
+29,busqueda en profundidad,N/A,N/A,0.02099752426147461,True,
+30,busqueda en profundidad,N/A,N/A,0.401050329208374,True,
+1,busqueda en profundidad limitada,N/A,92,0.0060062408447265625,False,
+2,busqueda en profundidad limitada,N/A,88,0.005998373031616211,False,
+3,busqueda en profundidad limitada,N/A,79,0.006983280181884766,False,
+4,busqueda en profundidad limitada,N/A,87,0.0059969425201416016,False,
+5,busqueda en profundidad limitada,N/A,75,0.0059967041015625,False,
+6,busqueda en profundidad limitada,N/A,76,0.005996227264404297,False,
+7,busqueda en profundidad limitada,N/A,114,0.005024433135986328,False,
+8,busqueda en profundidad limitada,N/A,89,0.007184028625488281,False,
+9,busqueda en profundidad limitada,N/A,74,0.005997180938720703,False,
+10,busqueda en profundidad limitada,N/A,86,0.005991220474243164,False,
+11,busqueda en profundidad limitada,N/A,65,0.004998207092285156,False,
+12,busqueda en profundidad limitada,N/A,81,0.005980491638183594,False,
+13,busqueda en profundidad limitada,N/A,54,0.005997657775878906,False,
+14,busqueda en profundidad limitada,N/A,87,0.006011486053466797,False,
+15,busqueda en profundidad limitada,N/A,86,0.024985790252685547,False,
+16,busqueda en profundidad limitada,N/A,81,0.006995439529418945,False,
+17,busqueda en profundidad limitada,N/A,89,0.0059969425201416016,False,
+18,busqueda en profundidad limitada,N/A,107,0.005996227264404297,False,
+19,busqueda en profundidad limitada,N/A,95,0.0050852298736572266,False,
+20,busqueda en profundidad limitada,N/A,86,0.005997896194458008,False,
+21,busqueda en profundidad limitada,N/A,65,0.005997180938720703,False,
+22,busqueda en profundidad limitada,N/A,56,0.005978107452392578,False,
+23,busqueda en profundidad limitada,N/A,115,0.005998373031616211,False,
+24,busqueda en profundidad limitada,N/A,116,0.005971431732177734,False,
+25,busqueda en profundidad limitada,N/A,97,0.005997180938720703,False,
+26,busqueda en profundidad limitada,N/A,76,0.005995750427246094,False,
+27,busqueda en profundidad limitada,N/A,55,0.005995988845825195,False,
+28,busqueda en profundidad limitada,N/A,108,0.005996227264404297,False,
+29,busqueda en profundidad limitada,N/A,82,0.005995750427246094,False,
+30,busqueda en profundidad limitada,N/A,94,0.005995512008666992,False,
+1,busqueda costo Uniforme E1,True,6581,0.0659494400024414,False,65
+2,busqueda costo Uniforme E1,True,9306,0.09422016143798828,False,119
+3,busqueda costo Uniforme E1,True,2861,0.030997276306152344,False,56
+4,busqueda costo Uniforme E1,True,1435,0.018037080764770508,False,29
+5,busqueda costo Uniforme E1,True,2525,0.02799820899963379,False,36
+6,busqueda costo Uniforme E1,True,6974,0.07101154327392578,False,109
+7,busqueda costo Uniforme E1,True,526,0.010993719100952148,False,16
+8,busqueda costo Uniforme E1,True,1478,0.017978668212890625,False,27
+9,busqueda costo Uniforme E1,True,6948,0.07090568542480469,False,68
+10,busqueda costo Uniforme E1,True,1828,0.023007869720458984,False,39
+11,busqueda costo Uniforme E1,True,6498,0.06605195999145508,False,83
+12,busqueda costo Uniforme E1,True,2784,0.0299835205078125,False,54
+13,busqueda costo Uniforme E1,True,3067,0.032991886138916016,False,48
+14,busqueda costo Uniforme E1,True,689,0.01199793815612793,False,23
+15,busqueda costo Uniforme E1,True,7700,0.07704448699951172,False,93
+16,busqueda costo Uniforme E1,True,9664,0.09708213806152344,False,114
+17,busqueda costo Uniforme E1,True,1180,0.01698923110961914,False,24
+18,busqueda costo Uniforme E1,True,697,0.010997533798217773,False,19
+19,busqueda costo Uniforme E1,True,1764,0.020990371704101562,False,33
+20,busqueda costo Uniforme E1,True,1323,0.016846418380737305,False,32
+21,busqueda costo Uniforme E1,True,1423,0.018886804580688477,False,34
+22,busqueda costo Uniforme E1,True,7876,0.08014082908630371,False,119
+23,busqueda costo Uniforme E1,True,2004,0.02405524253845215,False,32
+24,busqueda costo Uniforme E1,True,3819,0.03998851776123047,False,48
+25,busqueda costo Uniforme E1,True,8151,0.08201479911804199,False,95
+26,busqueda costo Uniforme E1,True,3173,0.034979820251464844,False,42
+27,busqueda costo Uniforme E1,True,2542,0.02893686294555664,False,41
+28,busqueda costo Uniforme E1,True,5439,0.05507040023803711,False,71
+29,busqueda costo Uniforme E1,True,404,0.010006189346313477,False,14
+30,busqueda costo Uniforme E1,True,2421,0.026994943618774414,False,48
+1,busqueda costo Uniforme E2,True,2729,0.03298211097717285,False,77
+2,busqueda costo Uniforme E2,True,8935,0.09505534172058105,False,202
+3,busqueda costo Uniforme E2,True,2671,0.030977964401245117,False,182
+4,busqueda costo Uniforme E2,True,1220,0.028983116149902344,False,50
+5,busqueda costo Uniforme E2,True,1051,0.016813039779663086,False,46
+6,busqueda costo Uniforme E2,True,6524,0.07084441184997559,False,366
+7,busqueda costo Uniforme E2,True,1703,0.022373437881469727,False,58
+8,busqueda costo Uniforme E2,True,4303,0.04907631874084473,False,99
+9,busqueda costo Uniforme E2,True,8194,0.08593463897705078,False,240
+10,busqueda costo Uniforme E2,True,1259,0.01898479461669922,False,91
+11,busqueda costo Uniforme E2,True,8083,0.0849461555480957,False,213
+12,busqueda costo Uniforme E2,True,4000,0.04497408866882324,False,165
+13,busqueda costo Uniforme E2,True,3908,0.04297447204589844,False,120
+14,busqueda costo Uniforme E2,True,608,0.011988639831542969,False,44
+15,busqueda costo Uniforme E2,True,8474,0.09394526481628418,False,168
+16,busqueda costo Uniforme E2,True,9403,0.09994244575500488,False,301
+17,busqueda costo Uniforme E2,True,2576,0.030971527099609375,False,83
+18,busqueda costo Uniforme E2,True,310,0.008995771408081055,False,25
+19,busqueda costo Uniforme E2,True,1837,0.02298712730407715,False,102
+20,busqueda costo Uniforme E2,True,1539,0.0199892520904541,False,93
+21,busqueda costo Uniforme E2,True,947,0.013991594314575195,False,75
+22,busqueda costo Uniforme E2,True,6939,0.07505202293395996,False,167
+23,busqueda costo Uniforme E2,True,1666,0.021987199783325195,False,59
+24,busqueda costo Uniforme E2,True,1713,0.021999359130859375,False,66
+25,busqueda costo Uniforme E2,True,8339,0.09029197692871094,False,172
+26,busqueda costo Uniforme E2,True,3144,0.03598332405090332,False,106
+27,busqueda costo Uniforme E2,True,1344,0.018988847732543945,False,52
+28,busqueda costo Uniforme E2,True,6199,0.06696534156799316,False,200
+29,busqueda costo Uniforme E2,True,1319,0.018973588943481445,False,51
+30,busqueda costo Uniforme E2,True,3034,0.03496956825256348,False,189

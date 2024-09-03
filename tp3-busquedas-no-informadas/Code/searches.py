@@ -87,33 +87,30 @@ def dfs_search(grid, start, goal):
 
 
 def ucs_search_1(grid, start, goal): #las acciones tiene costo 1
-    # (costo,posición actual, camino tomado)
-    frontier=PriorityQueue()
-    frontier.put((0,start,[]))
+    frontier = PriorityQueue()
+    frontier.put((0, start, []))
     explored = set()
-    frontier_nodes=set()
+    cost_so_far = {}
+    cost_so_far[start] = 0
 
-    while frontier:
-        cost,position, path = frontier.get()
+    while not frontier.empty():
+        cost, position, path = frontier.get()
 
         if position in explored:
             continue
 
         explored.add(position)
 
-        if grid[position[0]][position[1]] == b'G':  # Llegamos al objetivo
-            return path + [position],explored, len(path)+1
-        
+        if grid[position[0]][position[1]] == b'G':
+            return path + [position], explored, cost
+
         neighbors= get_neighbors(position, grid)
 
-        for neighbor in neighbors:
-            if neighbor not in explored and grid[neighbor[0]][neighbor[1]] != b'H':  # Evitar huecos
-                frontier.put((1,neighbor, path + [position]))
-                frontier_nodes.add(neighbor)
-            # Si el vecino ya está en la frontera con un costo mayor, lo reemplazamos
-            elif neighbor in frontier_nodes == True and cost < frontier.get(neighbor)[0] and grid[neighbor[0]][neighbor[1]] != b'H':
-                frontier.put((cost,neighbor,path + [position]))
-                frontier_nodes.add(neighbor)
+        for neighbor in (neighbors):
+            new_cost = cost_so_far[position]+ 1 
+            if neighbor not in explored or new_cost < cost_so_far[neighbor]:
+                cost_so_far[neighbor] = new_cost
+                frontier.put((new_cost , neighbor, path + [position]))
     
     return None,explored,None  # Si no se encuentra el objetivoo
 
