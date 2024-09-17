@@ -11,11 +11,14 @@ from board import Board
 
 
 def genetic_algorithm(list_boards, max_iter):
+
+    punto_cinco=[]
     
     for it in range(max_iter):
         list_boards.sort(key=lambda x: x.objective_function())  # Ordenar por fitness
+        punto_cinco.append(list_boards[0].objective_function())
         if list_boards[0].objective_function() == 0:  # Solución óptima 
-            return list_boards[0], it
+            return list_boards[0], it, punto_cinco
         
         selected_boards = list_boards[:15]  # Selección de los 15 mejores
         
@@ -41,7 +44,7 @@ def genetic_algorithm(list_boards, max_iter):
         # Reemplazo
         list_boards = new_boards[:20] + list_boards[:5] # 20 mejores nuevos + 5 mejores antiguos (mutados)
         
-    return list_boards[0], max_iter  # Mejor individuo al final de las iteraciones
+    return list_boards[0], max_iter,punto_cinco  # Mejor individuo al final de las iteraciones
 
 def mutar(individuo):
     n = individuo.n

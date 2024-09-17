@@ -9,6 +9,7 @@ from copy import deepcopy
 from time import time
 import csv
 from utils import *
+import matplotlib.pyplot as plt
 
 def main():
 
@@ -26,6 +27,7 @@ def main():
     #probamos los algoritmos en los tableros creados
     print("--------Hill Climbing------")
 
+    particular_ex=0
    
     for board in boards:
         board_cop = deepcopy(board) #copio para no modificar el original
@@ -38,7 +40,12 @@ def main():
         
         start=time()
         max_states = 100
-        board_sol,number_states,truncated = hill_climbing(board_cop,max_states)
+        if particular_ex == 0:
+            l1=[]
+            board_sol,number_states,truncated,l1 = hill_climbing(board_cop,max_states)
+            particular_ex+=1
+        else:
+            board_sol,number_states,truncated,_ = hill_climbing(board_cop,max_states)
         end=time()
         if truncated:
             #board_sol.print_board()
@@ -66,6 +73,7 @@ def main():
         
     print("--------Simulated Annealing------")
 
+    particular_ex=0
 
     for board in boards:
         board_cop = deepcopy(board) #copio para no modificar el original
@@ -78,7 +86,12 @@ def main():
 
         start=time()
         max_states = 100
-        board_sol,number_states,truncated = simulated_annealing(board_cop,max_states)
+        if particular_ex == 0:
+            l2=[]
+            board_sol,number_states,truncated,l2 = simulated_annealing(board_cop,max_states)
+            particular_ex+=1
+        else:
+            board_sol,number_states,truncated,_ = simulated_annealing(board_cop,max_states)
         end=time()
         if truncated:
             #board_sol.print_board()
@@ -108,6 +121,8 @@ def main():
 
     print("--------Genetic Algorithm------")
 
+    particular_ex=0
+
     #voy a pasar por cada iteracion los 30 tableros de cada tamaño y van a hacer 30 it
     number=0
     four_quees_list = []
@@ -130,7 +145,12 @@ def main():
         print("Solucion")
         start=time()
         number_of_max_searches = 30
-        board_sol,number_states = genetic_algorithm(four_quees_list,number_of_max_searches)
+        if particular_ex == 0:
+            l3=[]
+            board_sol,number_states,l3 = genetic_algorithm(four_quees_list,number_of_max_searches)
+            particular_ex+=1
+        else:
+            board_sol,number_states,_ = genetic_algorithm(four_quees_list,number_of_max_searches)
         end=time()
         queens_sol=board_sol.objective_function()
         if queens_sol == 0:
@@ -148,7 +168,7 @@ def main():
         print("Solucion")
         start=time()
         number_of_max_searches = 30
-        board_sol,number_states = genetic_algorithm(eight_quees_list,number_of_max_searches)
+        board_sol,number_states,_ = genetic_algorithm(eight_quees_list,number_of_max_searches)
         end=time()
         queens_sol=board_sol.objective_function()
         if queens_sol == 0:
@@ -166,7 +186,7 @@ def main():
         print("Solucion")
         start=time()
         number_of_max_searches = 30
-        board_sol,number_states = genetic_algorithm(ten_quees_list,number_of_max_searches)
+        board_sol,number_states,_ = genetic_algorithm(ten_quees_list,number_of_max_searches)
         end=time()
         queens_sol=board_sol.objective_function()
         if queens_sol == 0:
@@ -177,8 +197,24 @@ def main():
         print("Cantidad de pares de reinas atacandose: ", queens_sol)
         print("cantidad de estados explorados: ", number_states)
         guardar_resultados_csv(file,board_sol.n,"Genetic Algorithm",optimal,False,number_states,end-start,queens_sol)
-        
 
+
+    #grafico de las iteraciones para una ejecucion particular
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(l1, label='HC')
+    plt.plot(l2, label='SA')
+    plt.plot(l3, label='GA')
+
+    # Etiquetas del gráfico
+    plt.title('Comparativa de la funcion objetivo(mismo tablero de 4x4)')
+    plt.xlabel('Iteración')
+    plt.ylabel('Número de Pares de Reinas Atacándose')
+    plt.legend()
+    plt.grid(True)
+
+    # Guardar el gráfico
+    plt.savefig('comparativa_funcion_objetivo.png')
 
 
 if __name__ == "__main__":

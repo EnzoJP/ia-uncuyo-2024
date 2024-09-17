@@ -5,6 +5,9 @@ from math import exp
 
 
 def simulated_annealing(board, max_states):
+
+    punto_cinco=[]
+
     temperature = max_states
     initial_temperature = temperature
     number_states = 0
@@ -24,6 +27,7 @@ def simulated_annealing(board, max_states):
             
             board.board[k][j] = 1
             pairs_new = board.objective_function()
+            punto_cinco.append(pairs_new)
             delta = pairs_new - pairs
             
             temperature = schedule(temperature, initial_temperature)
@@ -43,17 +47,17 @@ def simulated_annealing(board, max_states):
         
         #  solución óptima
         if best_pairs == 0:
-            return board, number_states, False
+            return board, number_states, False, punto_cinco
         
         
-        if temperature < 1e-10: # doubdful
-            return board, number_states, False
+        if temperature < 1e-10: 
+            return board, number_states, False,punto_cinco  
         
         
         if number_states > max_states:
-            return board, number_states, True  # Retorno la mejor solución encontrada hasta el momento
+            return board, number_states, True,punto_cinco  # Retorno la mejor solución encontrada hasta el momento
     
-    return board, number_states, False  # No se encontró solución
+    return board, number_states, False,punto_cinco  # No se encontró solución
 
 def schedule(t, initial_temperature, alpha=0.001):
     return initial_temperature / (1 + alpha * t)
