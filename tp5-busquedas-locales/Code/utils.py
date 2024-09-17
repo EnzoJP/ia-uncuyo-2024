@@ -1,5 +1,5 @@
 import csv
 
-def guardar_resultados_csv(file,number_escenario, algoritmo, result, explored, finish_time):
+def guardar_resultados_csv(file,a, b, c, d, e,f,g):
     writer = csv.writer(file)
-    writer.writerow([number_escenario, algoritmo, result, explored, finish_time])
+    writer.writerow([a,b,c,d,e,f,g])

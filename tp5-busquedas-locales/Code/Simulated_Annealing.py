@@ -1,10 +1,7 @@
 from random import random,randint
 from math import exp
 
-#??????????????
-#en proceso
-#actualmente solo baja 1 par de reinas como mucho 2 :((((
-
+#incluso con gpt no funciona como deberia 
 
 
 def simulated_annealing(board, max_states):
@@ -60,4 +57,3 @@ def simulated_annealing(board, max_states):
 
 def schedule(t, initial_temperature, alpha=0.001):
     return initial_temperature / (1 + alpha * t)
-
