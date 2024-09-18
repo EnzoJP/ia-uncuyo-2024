@@ -81,7 +81,7 @@ Este es un ejemplo de la evolución de la función objetivo en una ejecución en
 Por ultimo podemos observar en esta imagen como en general para todas las pruebas el porcentaje de soluciones optimas encontradas por el algoritmo genético es mayor que el de hill climbing y simulated annealing,
 asi tambien como el promedio general y su desviación estandar.
 
-![Grafico 8](../tp5-busquedas-locales/Images/porcentajes.png)
+![Grafico 8](../tp5-busquedas-locales/Images/Porcentajes.png)
 
 
 ## Conclusiones
