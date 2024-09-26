@@ -94,3 +94,34 @@ print(f"Hill Climbing - Promedio: {hill_mean}, Desviacion Estandar: {hill_std}, 
 print(f"Simulated Annealing - Promedio: {sa_mean}, Desviacion Estandar: {sa_std}, Porcentaje de tableros optimos: {sa_optimal}")
 print(f"Genetico - Promedio: {gen_mean}, Desviacion Estandar: {gen_std}, Porcentaje de tableros optimos: {gen_optimal}")
 
+#calcular el porcentaje de tableros resueltos por tamaño
+
+for size in df['N_Reinas'].unique():  # Iterar por cada tamaño de tablero
+    # Filtrar datos por tamaño de tablero
+    hill_size_data = hill_data[hill_data['N_Reinas'] == size]
+    sa_size_data = sa_data[sa_data['N_Reinas'] == size]
+    gen_size_data = gen_data[gen_data['N_Reinas'] == size]
+    
+    # calcular el porcentaje de tableros resueltos
+    hill_optimal = hill_size_data[hill_size_data['Optima'] == True].count()
+    hill_optimal = hill_optimal['Optima']
+    hill_total = hill_size_data['Optima'].count()
+
+    sa_optimal = sa_size_data[sa_size_data['Optima'] == True].count()
+    sa_optimal = sa_optimal['Optima']
+    sa_total = sa_size_data['Optima'].count()
+
+    gen_optimal = gen_size_data[gen_size_data['Optima'] == True].count()
+    gen_optimal = gen_optimal['Optima']
+    gen_total = gen_size_data['Optima'].count()
+
+    hill_optimal = (hill_optimal/hill_total)*100
+    sa_optimal = (sa_optimal/sa_total)*100
+    gen_optimal = (gen_optimal/gen_total)*100
+
+    print(f"Tamano del tablero: {size}")
+    print(f"Hill Climbing - Porcentaje de tableros optimos: {hill_optimal}")
+    print(f"Simulated Annealing - Porcentaje de tableros optimos: {sa_optimal}")
+    print(f"Genetico - Porcentaje de tableros optimos: {gen_optimal}")
+    print("\n")
+

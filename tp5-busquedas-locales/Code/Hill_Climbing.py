@@ -17,6 +17,7 @@ def hill_climbing(board,max_states):
                 if pairs_new < pairs: #si el sucesor es mejor o igual
                     best_pairs = pairs_new
                     best_move = (k,j)
+                    
                 board.board[k][j] = 0 
         board.board[best_move[0]][best_move[1]] = 1
         if best_pairs == 0:

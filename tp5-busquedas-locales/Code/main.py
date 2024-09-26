@@ -40,12 +40,12 @@ def main():
         
         start=time()
         max_states = 100
-        if particular_ex == 0:
-            l1=[]
+        if particular_ex == 7:
             board_sol,number_states,truncated,l1 = hill_climbing(board_cop,max_states)
             particular_ex+=1
         else:
-            board_sol,number_states,truncated,_ = hill_climbing(board_cop,max_states)
+            particular_ex+=1
+            board_sol,number_states,truncated,lz = hill_climbing(board_cop,max_states)
         end=time()
         if truncated:
             #board_sol.print_board()
@@ -199,15 +199,13 @@ def main():
         guardar_resultados_csv(file,board_sol.n,"Genetic Algorithm",optimal,False,number_states,end-start,queens_sol)
 
 
-    #grafico de las iteraciones para una ejecucion particular
-
-    plt.figure(figsize=(10, 6))
-    plt.plot(l1, label='HC')
-    plt.plot(l2, label='SA')
-    plt.plot(l3, label='GA')
+    plt.figure(figsize=(10, 8))
+    plt.plot(l1, marker='o', linestyle='', label='HC')
+    plt.plot(l2, marker='o', linestyle='', label='SA')
+    plt.plot(l3, marker='o', linestyle='', label='GA')
 
     # Etiquetas del gráfico
-    plt.title('Comparativa de la funcion objetivo(mismo tablero de 4x4)')
+    plt.title('Comparativa de la funcion objetivo (mismo tablero de 4x4)')
     plt.xlabel('Iteración')
     plt.ylabel('Número de Pares de Reinas Atacándose')
     plt.legend()
@@ -215,6 +213,7 @@ def main():
 
     # Guardar el gráfico
     plt.savefig('comparativa_funcion_objetivo.png')
+
 
 
 if __name__ == "__main__":

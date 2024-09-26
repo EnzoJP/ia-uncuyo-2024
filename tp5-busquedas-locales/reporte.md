@@ -41,6 +41,11 @@ Para el caso de el algoritmo genético se utilizó las siguientes especificacion
 + mutación: se mutan remplazando una reina por otra al azar en la misma columna con probabilidad 0.8
 + condicion de parada: cantidad de iteraciones
 
+Para el caso de el algoritmo de simulated annealing se usaron las siguientes especificaciones
+
++ se uso una temperatura inicial de 100
++ con una funcion de initial_temperature / (1 + 0.001 * t)
+
 ## Resultados
 
 Comenzaremos por analizar los resultados en los tiempos de ejecución de los algoritmos.
@@ -81,7 +86,11 @@ Este es un ejemplo de la evolución de la función objetivo en una ejecución en
 Por ultimo podemos observar en esta imagen como en general para todas las pruebas el porcentaje de soluciones optimas encontradas por el algoritmo genético es mayor que el de hill climbing y simulated annealing,
 asi tambien como el promedio general y su desviación estandar.
 
+En la segunda imagen vemos un poco mas desglosado, ya que se ven los porcentajes por algoritmo
+
 ![Grafico 8](../tp5-busquedas-locales/Images/Porcentajes.png)
+
+![Grafico 8](../tp5-busquedas-locales/Images/porc_size.png)
 
 
 ## Conclusiones
