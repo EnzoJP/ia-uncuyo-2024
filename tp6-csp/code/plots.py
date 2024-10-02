@@ -41,23 +41,38 @@ plt.xlabel('Algoritmo')
 plt.grid(True)
 plt.savefig('comparativa_reinas.png')
 
+import numpy as np
+
 for size in df['N_Reinas'].unique():  # Iterar por cada tamaño de tablero
     # Filtrar datos por tamaño de tablero
     b = bc_data[bc_data['N_Reinas'] == size]['Explorados'].dropna()
-    f = fc_data[fc_data ['N_Reinas'] == size]['Explorados'].dropna()
+    f = fc_data[fc_data['N_Reinas'] == size]['Explorados'].dropna()
     
-    # Crear boxplot
+    b_mean = b.mean() if not b.empty else 0
+    f_mean = f.mean() if not f.empty else 0
+    b_std = b.std() if not b.empty else 0
+    f_std = f.std() if not f.empty else 0
+
+    # Crear gráfico de barras
+    bar_width = 0.35
+    x = np.arange(2)  # Dos grupos: BackTracking y FowardChecking
+    means = [b_mean, f_mean]
+    stds = [b_std, f_std]
+
     plt.figure(figsize=(10, 6))
-    plt.boxplot([b, f], labels=['BackTracking', 'FowardChecking'])
+    plt.bar(x, means, width=bar_width, yerr=stds, capsize=5, color=['blue', 'orange'], alpha=0.7)
 
     # Etiquetas y título
     plt.title(f'Comparativa de explorados - Tamaño del Tablero: {size}')
-    plt.ylabel('explorados')
+    plt.ylabel('Explorados')
     plt.xlabel('Algoritmo')
-    plt.grid(True)
+    plt.xticks(x, ['BackTracking', 'FowardChecking'])  # Etiquetas de los grupos
+    plt.grid(axis='y')
     
     # Guardar el gráfico
     plt.savefig(f'comparativa_reinas_explorados_{size}.png')
+    plt.close()  # Cerrar la figura para liberar memoria
+
 
 # Calcular promedio y desviación estándar
 

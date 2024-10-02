@@ -2,7 +2,8 @@
 
 from board import Board
 from random import randint,seed
-from csps import *
+from backtracking import BackTracking
+from fowardCh import FowardChecking
 from copy import deepcopy
 from time import time
 import csv
@@ -19,7 +20,7 @@ def main():
         for i in range(iterations):
             #creo un tablero
             board = Board(size)
-            board.random_board()
+            #board.random_board()
             boards.append(board)
 
     #probamos los algoritmos en los tableros creados
@@ -30,13 +31,11 @@ def main():
         print("Numero de tablero: ", boards.index(board)+1)
         print("longitud del tablero: ", board.n)
         #board.print_board()
-        first_queens = board.objective_function()
-        print("Cantidad de reinas atacandose (pares): ", first_queens)
         print("Solucion")
         
         start=time()
-        max_states = 100
-            #invoca al backtracking
+        max_states = 10000
+        result,truncated,board_sol,number_states = BackTracking(board_cop,max_states)
         end=time()
         if truncated:
             #board_sol.print_board()
@@ -69,13 +68,12 @@ def main():
         print("Numero de tablero: ", boards.index(board)+1)
         print("longitud del tablero: ", board.n)
         #board.print_board()
-        first_queens = board.objective_function()
-        print("Cantidad de reinas atacandose (pares): ", first_queens)
         print("Solucion")
 
         start=time()
-        max_states = 100
-           #invocar al foward checking
+        max_states = 10000
+        nstates=0
+        _,truncated,board_sol,number_states = FowardChecking(board_cop,max_states)
         end=time()
         if truncated:
             #board_sol.print_board()
