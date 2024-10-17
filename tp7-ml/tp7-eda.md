@@ -84,7 +84,7 @@ ggsave("tp7-ml/images/peligrosa_per_species.png",width = 23, height = 10, units 
 
 ![Grafico 3](../tp7-ml/images/peligrosa_per_species.png)
 
-La especie que mas arboles peligrosos tiene es Morera seguido por la Pitano.
+La especie que mas arboles peligrosos tiene es Morera seguido por la Pltano.
 
 # Ejericio 3
 

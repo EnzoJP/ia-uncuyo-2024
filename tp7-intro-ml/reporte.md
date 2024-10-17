@@ -15,10 +15,10 @@
 ### (a) We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry and the CEO salary. We are interested in understanding which factors affect CEO salary.
     Es un problema de regresión ya que la variable de interés es continua. Estamos interesados en inferencia ya que queremos entender que factores afectan el salario del CEO. n=500, p=3
 ### (b) We are considering launching a new product and wish to know whether it will be a success or a failure. We collect data on 20 similar products that were previously launched. For each product we have recorded whether it was a success or failure, price charged for the product, marketing budget, competition price, and ten other variables.
-    Es un problema de clasificación ya que la variable de interés es categórica. Estamos interesados en predicción ya que queremos saber si nuestro producto será un éxito o un fracaso. n=20, p=14
+    Es un problema de clasificación ya que la variable de interés es categórica. Estamos interesados en predicción ya que queremos saber si nuestro producto será un éxito o un fracaso. n=20, p=13
 
 ### (c) We are interested in predicting the % change in the US dollar in relation to the weekly changes in the world stock markets. Hence we collect weekly data for all of 2012. For each week we record the % change in the dollar, the % change in the US market, the % change in the British market, and the % change in the German market.
-    Es un problema de regresión. Estamos interesados en predicción ya que queremos predecir el cambio porcentual del dólar. n=52, p=4
+    Es un problema de regresión. Estamos interesados en predicción ya que queremos predecir el cambio porcentual del dólar. n=52, p=3
 
 ### (d) We are interested in predicting the price of a stock. We collect data for the last month on the price of the stock at closing, the % change in the stock price each day, the volume of stocks traded each day, the price of the stock at opening, and the highest price the stock reached during the day.
     Es un problema de regresión ya que es un precio. Estamos interesados en predicción ya que queremos predecir el precio de la acción. n=30, p=4

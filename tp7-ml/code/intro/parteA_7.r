@@ -1,28 +1,19 @@
+library(rpart)
+library(dplyr)
 
-### create_folds
-
-```
-create_folds <- function(dataframe, k) {
-    n <- nrow(dataframe)
-    indices <- sample(1:n) #división en folds aleatoria 
-    # Crear los k folds, dividiendo los índices en k subconjuntos
-    list_indices <- split(indices, rep(1:k, length.out = n))
-    
-    # Crear la estructura de la lista con los nombres de los folds
-    folds <- list()
-    for (i in 1:k) {
-        fold_name <- paste0("Fold", i)
-        folds[[fold_name]] <- list_indices[[i]]  # Guardar los índices
-    }
-    
-    return(folds)
+calculate_metrics <- function(conf_matrix) {
+  TP <- conf_matrix[1, 1]
+  FP <- conf_matrix[1, 2]
+  FN <- conf_matrix[2, 1]
+  TN <- conf_matrix[2, 2]
+  
+  accuracy <- (TP + TN) / (TP + TN + FP + FN)
+  precision <- TP / (TP + FP)
+  sensitivity <- TP / (TP + FN)  
+  specificity <- TN / (TN + FP)
+  
+  return(c(accuracy, precision, sensitivity, specificity))
 }
-
-```
-
-### cross_validation
-
-```
 
 create_folds <- function(dataframe, k) {
     n <- nrow(dataframe)
@@ -93,10 +84,15 @@ cross_validation <- function(dataframe, k,folds) {
   return(metrics_summary)
 }
     
-```
+#------------------------------------------
 
-|accuracy_mean|accuracy_sd|precision_mean|precision_sd|sensitivity_mean|sensitivity_sd|specificity_me|specificity_sd|
-|-------------|-----------|--------------|------------|----------------|--------------|--------------|--------------|
-|0.8910977    |0.01451993 |1             |0           |0.8910977       |0.01451993    |NaN           |NA            |
+seed <- 123
+set.seed(seed)
+data <- read.csv("tp7-ml/data/arbolado-mendoza-dataset-validation.csv")
+folds <- create_folds(data, 10)
+
+#------------------------------------------
 
 
+result <- cross_validation(data, 10,folds)
+print(result)
