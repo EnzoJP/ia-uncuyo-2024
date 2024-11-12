@@ -50,9 +50,39 @@ data_train <- na.omit(data_train)
 
 # tecnica de pesos Cost-Sensitive Learning
 
-weight_pos <- (nrow(data_train) / sum(data_train$inclinacion_peligrosa == 1))
-
+#weight_pos <- (nrow(data_train) / sum(data_train$inclinacion_peligrosa == 1))
+weight_pos <- 1
 weight_neg <- (nrow(data_train) / sum(data_train$inclinacion_peligrosa == 0))
+
+
+weights <- ifelse(
+  data_train$inclinacion_peligrosa == 1,
+  case_when(
+    data_train$especie == "Morera" ~ weight_pos * 3,
+    data_train$especie == "Pltano" ~ weight_pos * 1.5,
+    data_train$especie == "Paraiso" ~ weight_pos * 1.3,
+    data_train$especie == "Fresno europeo" ~ weight_pos * 1.1,
+    data_train$especie == "Acacia SP" ~ weight_pos * 2,
+    data_train$especie == "Fresno americano" ~ weight_pos * 1,
+    data_train$especie == "Aguaribay" ~ weight_pos * 1.5,
+    data_train$especie == "Jacarand" ~ weight_pos * 1.8,
+    data_train$especie == "Caducifolio" ~ weight_pos * 1,
+    data_train$especie == "Eucalyptus" ~ weight_pos * 0.8,
+    data_train$especie == "lamo criollo" ~ weight_pos * 0.000000001,
+    data_train$especie == "Conifera" ~ weight_pos * 0.1,
+    data_train$especie == "Algarrabo" ~ weight_pos * 5,
+    data_train$especie == "Olmo bola" ~ weight_pos * 0.5,
+    data_train$especie == "Acasia visco" ~ weight_pos * 1.8,
+    data_train$especie == "Ligustro" ~ weight_pos * 0.1,
+    data_train$especie == "Tipa" ~ weight_pos * 2,
+    data_train$especie == "Catalpa" ~ weight_pos * 2.2,
+    data_train$especie == "Arabia" ~ weight_pos * 0.000001,
+    data_train$especie == "Maiten" ~ weight_pos * 0.000000001,
+    
+    TRUE ~ weight_pos  # valor por defecto si no coincide con nada
+  ),
+  weight_neg  # valor si inclinacion_peligrosa es 0
+)
 
 
 print(weight_pos)
